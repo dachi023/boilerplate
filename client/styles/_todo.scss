@@ -1,0 +1,191 @@
+.todo {
+  $color_gray: #e5e5e5;
+  $color_pink: #fd97a0;
+  $color_white: #fff;
+
+  $border_radius: 10px;
+
+  @mixin btn_sign_mark($color) {
+    padding: 15px 20px;
+    width: 100%;
+    background-color: $color_white;
+    border: none;
+    box-sizing: border-box;
+    color: $color;
+    cursor: pointer;
+    font-size: 1.2rem;
+    outline: none;
+    text-align: center;
+  }
+
+  margin: 3em auto 0;
+  padding: 0.8em 1.5em;
+  width: 90%;
+  background-color: $color_gray;
+  border: 1px solid $color_gray;
+  border-radius: $border_radius;
+
+  .row {
+    display: table;
+    table-layout: fixed;
+
+    &__cell {
+      display: table-cell;
+
+      &--main {
+        width: 100%;
+      }
+
+      &--sub {
+        width: 60px;
+      }
+
+      &--half {
+        width: 50%;
+      }
+    }
+  }
+
+  &__check-btn {
+    @include btn_sign_mark($color_gray);
+
+    &--checked {
+      color: $color_pink;
+    }
+
+    &--all {
+      border-radius: $border_radius 0 0 0;
+    }
+  }
+
+  &__text-input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-left: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    outline: none;
+
+    &--add {
+      border-radius: 0 $border_radius 0 0;
+    }
+  }
+
+  &__del-btn {
+    @include btn_sign_mark($color_gray);
+
+    &:hover {
+      color: $color_pink;
+    }
+  }
+
+  &__header {
+    width: 100%;
+
+    &__title {
+      margin: 0 0 0.5em;
+      color: $color_pink;
+    }
+
+    &__menu {
+      background-color: $color_white;
+      border: 1px solid $color_pink;
+      border-bottom-style: dashed;
+      border-radius: $border_radius $border_radius 0 0;
+
+      &__check-btn {
+
+        &--no-tasks {
+          border-radius: $border_radius 0 0 $border_radius;
+        }
+      }
+
+      &__text-input {
+
+        &--no-tasks {
+          border-radius: 0 $border_radius $border_radius 0;
+        }
+      }
+
+      &--no-tasks {
+        border-bottom-style: solid;
+        border-radius: $border_radius;
+      }
+    }
+  }
+
+  &__main {
+    border: 1px solid $color_pink;
+    border-top: none;
+    border-radius: 0 0 $border_radius $border_radius;
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &__item {
+        border: none;
+
+        &__label {
+          padding: 12px 15px;
+          width: 100%;
+          background-color: $color_white;
+          box-sizing: border-box;
+          display: inline-block;
+          font-size: 1.2rem;
+        }
+
+        &:last-child {
+
+          .todo__main__list__item__toggle-complete {
+            border-radius: 0 0 0 $border_radius;
+          }
+
+          .todo__main__list__item__del {
+            border-radius: 0 0 $border_radius 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin: 1.2em 0 0.7em;
+    padding: 0 0.1em;
+    width: 100%;
+    clear: both;
+
+    &__left {
+      text-align: left;
+      vertical-align: bottom;
+
+      &__completed-count {
+        color: $color_pink;
+        font-size: 1.1rem;
+      }
+    }
+
+    &__right {
+      text-align: right;
+
+      &__clear-completed {
+        padding: 10px 15px;
+        background-color: $color_white;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: $color_gray;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        
+        &--active {
+          color: $color_pink;
+        }
+      }
+    }
+  }
+}

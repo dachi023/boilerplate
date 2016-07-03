@@ -1,0 +1,56 @@
+{
+  "name": "boilerplate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "dachi's frontend boilerplate",
+  "main": "client/index.js",
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000 --content-base client/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dachi023/boilerplate.git"
+  },
+  "author": "dachi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dachi023/boilerplate/issues"
+  },
+  "homepage": "https://github.com/dachi023/boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "axios": "^0.12.0",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-runtime": "^6.9.2",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.23.1",
+    "cssnano": "^3.7.1",
+    "eslint": "^3.0.0",
+    "eslint-plugin-react": "^5.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "flux": "^2.1.1",
+    "immutable": "^3.8.1",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^2.5.2",
+    "rucksack-css": "^0.8.6",
+    "sass-lint": "^1.8.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.0"
+  }
+}
